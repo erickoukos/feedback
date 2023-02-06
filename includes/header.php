@@ -1,3 +1,4 @@
+<?php include('../config/connect.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,5 +23,8 @@
                 <li class = "nav-item"><a class = "nav-link" href = "#"> About Us</a></li>
             </ul>
         </div>
-
     </nav>
+    <main>
+        <div class="container d-flex flex-column align-items-center">
+
+        
