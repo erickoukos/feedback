@@ -42,7 +42,7 @@ if(isset($_POST['submit'])){
 
     if(empty($names_error) && empty($email_error) && empty($body_error)){
         // add data / feedback to the database
-        $sql = "INSERT INTO feedbacks(names, email, feedback) values($names, $email, $body)";
+        $sql = "INSERT INTO feedbacks(names, email, body) values('$names', '$email', '$body')";
 
         if(mysqli_query($conn, $sql)){
             // success
