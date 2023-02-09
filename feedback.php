@@ -18,7 +18,7 @@ $feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
      <div class="card-body text-center">
        <?php echo $item['body']; ?>
        <div class="text-secondary mt-2">By <?php echo $item[
-         'name'
+         'names'
        ]; ?> on <?php echo date_format(
    date_create($item['date']),
    'g:ia \o\n l jS F Y'
