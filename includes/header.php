@@ -12,15 +12,15 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-2">
         <div class="container">
-            <a class = "navbar-brand" href="#">FeedBack Limited</a>
+            <a class = "navbar-brand" href="./index.php">FeedBack Limited</a>
             <button class="navbar-toggler" type = "button" data-bs-toggle="collapse" data-bs-target = "#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
                 <span class = "navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id = "navbarNav"></div>
             <ul class = "navbar-nav ms-auto">
-                <li class = "nav-item"><a class = "nav-link" href = "#"> Add Feedback</a></li>
-                <li class = "nav-item"><a class = "nav-link" href = "#"> Past Feedbacks</a></li>
-                <li class = "nav-item"><a class = "nav-link" href = "#"> About Us</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "./index.php"> Add Feedback</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "./feedback.php"> Past Feedbacks</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "./about.php"> About Us</a></li>
             </ul>
         </div>
     </nav>

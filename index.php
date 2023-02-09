@@ -1,4 +1,5 @@
 <?php include('includes/header.php'); ?>
+
 <?php
 // Create empty vars
 $names = $email = $body = '';
@@ -41,18 +42,17 @@ if(isset($_POST['submit'])){
 
     if(empty($names_error) && empty($email_error) && empty($body_error)){
         // add data / feedback to the database
-        $sql = "INSERT INTO `feedbacks`(names, email, body) values($names, $email, $body)";
+        $sql = "INSERT INTO feedbacks(names, email, feedback) values($names, $email, $body)";
 
         if(mysqli_query($conn, $sql)){
             // success
             header('Location: feedback.php');
         } else {
             echo 'Error: ' . mysqli_error($conn);
-        }
+        } 
 
     }
 }
-
 
 ?>
 <img src="/feedback/images/Erick.png" alt="Logo" class = "mb-3" style = "width: 100px;">
@@ -74,11 +74,18 @@ if(isset($_POST['submit'])){
 <div class="mb-3">
     <label for="email" class = "form-label">Your Email Address</label>
     <input type="text" name="email" id="email" class = "form-control <?php echo !$email_error ? : 'is-invalid'; ?>" placeholder = "Enter your email" value = "<?php echo $email; ?>">
+    
+    <div class="invalid-feedback" id = "validationServerFeedback">
+    Please provide a valid email!
+</div>
 </div>
 
 <div class="mb-3">
     <label for="body">Feedback</label>
     <textarea name="body" id="body" class = "form-control <?php echo !$body_error ? : 'is-invalid'; ?>" placeholder = "Enter your feedback" value = "<?php echo $body; ?>"></textarea>
+    <div class="invalid-feedback" id = "validationServerFeedback">
+    Please provide a feedback!
+</div>
 </div>
 
 <div class="mb-3">
